@@ -1,8 +1,22 @@
 """India House Price Prediction System - Premium UI/UX & Interactive Workflow Application."""
 
+import sys
+from pathlib import Path
+
+# Ensure repository root is on sys.path for cross-platform and cloud deployment execution
+ROOT_DIR = Path(__file__).resolve().parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
 
-from src.services.prediction_service import HousingPredictionService
+try:
+    from src.services.prediction_service import HousingPredictionService
+    SERVICE_IMPORT_ERROR: str | None = None
+except (ImportError, AttributeError, RuntimeError) as exc:
+    HousingPredictionService = None
+    SERVICE_IMPORT_ERROR = str(exc)
+
 from src.ui.styles import apply_custom_styles, render_step_progress_bar
 from src.ui.views.about_view import render_about_view
 from src.ui.views.cleaning_view import render_cleaning_view
@@ -23,6 +37,12 @@ st.set_page_config(
 @st.cache_resource(show_spinner="Loading trained machine learning pipeline...")
 def load_cached_service():
     """Load and cache the prediction service and serialized ML model."""
+    if HousingPredictionService is None:
+        return None, (
+            f"Failed to import HousingPredictionService: {SERVICE_IMPORT_ERROR}. "
+            "Please ensure all required dependencies (scikit-learn, joblib, pandas, etc.) "
+            "are properly installed from requirements.txt."
+        )
     try:
         return HousingPredictionService()
     except (FileNotFoundError, RuntimeError, ValueError, KeyError) as e:

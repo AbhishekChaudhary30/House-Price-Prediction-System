@@ -174,10 +174,12 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ### 7. Deploy to Streamlit Community Cloud
 This repository is pre-configured for one-click deployment:
-1. Push this repository to your GitHub account.
+1. Push this repository to your GitHub account (`git push origin main`).
 2. Sign in to [share.streamlit.io](https://share.streamlit.io).
-3. Select your repository, branch (`main`/`master`), and set **Main file path** to `app.py`.
-4. Deploy! Total repository and artifact weight is ~15 MB, well below the 1 GB cloud memory budget.
+3. Click **Create app** and select your repository, branch (`main`), and set **Main file path** to `app.py`.
+4. Click **Advanced settings...** and ensure the **Python version** is set to **3.11** (matching the `.python-version` file and modern `scikit-learn 1.7` / `numpy` binary wheels).
+5. Click **Deploy!** (If previously deployed, select **Manage app -> Reboot -> Clear cache and redeploy**).
+6. Total repository and artifact weight is ~15 MB, well below the 1 GB cloud memory budget.
 
 ---
 

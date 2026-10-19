@@ -1,0 +1,27 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ruff_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Data and Artifacts (ignore raw downloads and runtime temporary files, keep small deployment artifacts)
+data/raw/*.csv
+data/raw/*.zip
+data/processed/temp_*.csv
+reports/*.png
+scratch/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

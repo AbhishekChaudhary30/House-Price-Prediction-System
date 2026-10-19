@@ -1,0 +1,292 @@
+{
+  "model_name": "Hist_Gradient_Boosting",
+  "version": "1.0.0",
+  "model_type": "HistGradientBoostingRegressor",
+  "train_samples": 44434,
+  "test_samples": 11109,
+  "test_metrics": {
+    "model_name": "Hist_Gradient_Boosting",
+    "sample_size": 11109,
+    "mae_inr": 4365303.621079456,
+    "mae_formatted": "\u20b943.65 Lakh",
+    "rmse_inr": 11883608.335636599,
+    "rmse_formatted": "\u20b91.19 Cr",
+    "median_ae_inr": 1740563.4654320758,
+    "median_ae_formatted": "\u20b917.41 Lakh",
+    "r2_score": 0.7108138910696227,
+    "mape_percentage": 29.803558714299367
+  },
+  "candidate_comparison": {
+    "Baseline_Median": {
+      "model_name": "Baseline_Median",
+      "sample_size": 11109,
+      "mae_inr": 9677488.297776578,
+      "mae_formatted": "\u20b996.77 Lakh",
+      "rmse_inr": 22922164.06836475,
+      "rmse_formatted": "\u20b92.29 Cr",
+      "median_ae_inr": 4400000.0,
+      "median_ae_formatted": "\u20b944.00 Lakh",
+      "r2_score": -0.07594978164635036,
+      "mape_percentage": 78.56859077019999
+    },
+    "Ridge_Regression": {
+      "model_name": "Ridge_Regression",
+      "sample_size": 11109,
+      "mae_inr": 4728216.946571637,
+      "mae_formatted": "\u20b947.28 Lakh",
+      "rmse_inr": 29678898.19152749,
+      "rmse_formatted": "\u20b92.97 Cr",
+      "median_ae_inr": 1402114.3211139115,
+      "median_ae_formatted": "\u20b914.02 Lakh",
+      "r2_score": -0.8037498847738067,
+      "mape_percentage": 28.553542065023464
+    },
+    "Hist_Gradient_Boosting": {
+      "model_name": "Hist_Gradient_Boosting",
+      "sample_size": 11109,
+      "mae_inr": 4365303.621079456,
+      "mae_formatted": "\u20b943.65 Lakh",
+      "rmse_inr": 11883608.335636599,
+      "rmse_formatted": "\u20b91.19 Cr",
+      "median_ae_inr": 1740563.4654320758,
+      "median_ae_formatted": "\u20b917.41 Lakh",
+      "r2_score": 0.7108138910696227,
+      "mape_percentage": 29.803558714299367
+    },
+    "Random_Forest": {
+      "model_name": "Random_Forest",
+      "sample_size": 11109,
+      "mae_inr": 5503088.414849011,
+      "mae_formatted": "\u20b955.03 Lakh",
+      "rmse_inr": 13617450.451491626,
+      "rmse_formatted": "\u20b91.36 Cr",
+      "median_ae_inr": 2271921.73249902,
+      "median_ae_formatted": "\u20b922.72 Lakh",
+      "r2_score": 0.6202722152107797,
+      "mape_percentage": 39.61502718530688
+    }
+  },
+  "slice_analysis": {
+    "by_city": {
+      "Bengaluru": {
+        "model_name": "City_Bengaluru",
+        "sample_size": 2465,
+        "mae_inr": 3542221.9750739015,
+        "mae_formatted": "\u20b935.42 Lakh",
+        "rmse_inr": 9545597.704924628,
+        "rmse_formatted": "\u20b995.46 Lakh",
+        "median_ae_inr": 1448099.5666689696,
+        "median_ae_formatted": "\u20b914.48 Lakh",
+        "r2_score": 0.5789507705323531,
+        "mape_percentage": 27.461427515738784
+      },
+      "Delhi": {
+        "model_name": "City_Delhi",
+        "sample_size": 222,
+        "mae_inr": 6645114.557011525,
+        "mae_formatted": "\u20b966.45 Lakh",
+        "rmse_inr": 13700215.429321611,
+        "rmse_formatted": "\u20b91.37 Cr",
+        "median_ae_inr": 3387496.245798071,
+        "median_ae_formatted": "\u20b933.87 Lakh",
+        "r2_score": 0.7029430182802779,
+        "mape_percentage": 51.86545549151034
+      },
+      "Mumbai": {
+        "model_name": "City_Mumbai",
+        "sample_size": 8422,
+        "mae_inr": 4546113.194770596,
+        "mae_formatted": "\u20b945.46 Lakh",
+        "rmse_inr": 12436202.332341075,
+        "rmse_formatted": "\u20b91.24 Cr",
+        "median_ae_inr": 1823940.08959257,
+        "median_ae_formatted": "\u20b918.24 Lakh",
+        "r2_score": 0.7239401549615216,
+        "mape_percentage": 29.907525980971293
+      }
+    },
+    "by_property_type": {
+      "Apartment": {
+        "model_name": "Type_Apartment",
+        "sample_size": 10508,
+        "mae_inr": 4111385.741019616,
+        "mae_formatted": "\u20b941.11 Lakh",
+        "rmse_inr": 11211881.582584115,
+        "rmse_formatted": "\u20b91.12 Cr",
+        "median_ae_inr": 1651606.406857368,
+        "median_ae_formatted": "\u20b916.52 Lakh",
+        "r2_score": 0.7251308936740513,
+        "mape_percentage": 28.923019293558067
+      },
+      "Builder Floor": {
+        "model_name": "Type_Builder Floor",
+        "sample_size": 120,
+        "mae_inr": 7761662.399202155,
+        "mae_formatted": "\u20b977.62 Lakh",
+        "rmse_inr": 16112095.183233304,
+        "rmse_formatted": "\u20b91.61 Cr",
+        "median_ae_inr": 3380664.120462681,
+        "median_ae_formatted": "\u20b933.81 Lakh",
+        "r2_score": 0.6834739621998416,
+        "mape_percentage": 59.81686685639188
+      },
+      "Independent House": {
+        "model_name": "Type_Independent House",
+        "sample_size": 391,
+        "mae_inr": 7966681.950816327,
+        "mae_formatted": "\u20b979.67 Lakh",
+        "rmse_inr": 15293272.802039588,
+        "rmse_formatted": "\u20b91.53 Cr",
+        "median_ae_inr": 4385086.8239516765,
+        "median_ae_formatted": "\u20b943.85 Lakh",
+        "r2_score": 0.5042597028117868,
+        "mape_percentage": 38.535348654536946
+      },
+      "Villa": {
+        "model_name": "Type_Villa",
+        "sample_size": 90,
+        "mae_inr": 13837160.32515679,
+        "mae_formatted": "\u20b91.38 Cr",
+        "rmse_inr": 37311341.76835998,
+        "rmse_formatted": "\u20b93.73 Cr",
+        "median_ae_inr": 4352236.917748972,
+        "median_ae_formatted": "\u20b943.52 Lakh",
+        "r2_score": 0.5790667386530167,
+        "mape_percentage": 54.65890748613943
+      }
+    },
+    "by_bhk": {
+      "1_BHK": {
+        "model_name": "BHK_1.0",
+        "sample_size": 3435,
+        "mae_inr": 1597770.1624172714,
+        "mae_formatted": "\u20b915.98 Lakh",
+        "rmse_inr": 3104171.7533010156,
+        "rmse_formatted": "\u20b931.04 Lakh",
+        "median_ae_inr": 894104.9564993354,
+        "median_ae_formatted": "\u20b98.94 Lakh",
+        "r2_score": 0.4068393543248475,
+        "mape_percentage": 30.80153681468104
+      },
+      "2_BHK": {
+        "model_name": "BHK_2.0",
+        "sample_size": 4519,
+        "mae_inr": 3099045.1726573007,
+        "mae_formatted": "\u20b930.99 Lakh",
+        "rmse_inr": 5983514.497612717,
+        "rmse_formatted": "\u20b959.84 Lakh",
+        "median_ae_inr": 1746824.3302328438,
+        "median_ae_formatted": "\u20b917.47 Lakh",
+        "r2_score": 0.5601652335115799,
+        "mape_percentage": 27.993213422838902
+      },
+      "3_BHK": {
+        "model_name": "BHK_3.0",
+        "sample_size": 2370,
+        "mae_inr": 6610709.846546799,
+        "mae_formatted": "\u20b966.11 Lakh",
+        "rmse_inr": 14400538.066701278,
+        "rmse_formatted": "\u20b91.44 Cr",
+        "median_ae_inr": 3299616.944480993,
+        "median_ae_formatted": "\u20b933.00 Lakh",
+        "r2_score": 0.6175804817332133,
+        "mape_percentage": 29.070238531441372
+      },
+      "4_BHK": {
+        "model_name": "BHK_4.0",
+        "sample_size": 569,
+        "mae_inr": 17015017.58993347,
+        "mae_formatted": "\u20b91.70 Cr",
+        "rmse_inr": 30837834.005377263,
+        "rmse_formatted": "\u20b93.08 Cr",
+        "median_ae_inr": 8386222.931239873,
+        "median_ae_formatted": "\u20b983.86 Lakh",
+        "r2_score": 0.5777379706987424,
+        "mape_percentage": 38.4545541821363
+      },
+      "5_BHK": {
+        "model_name": "BHK_5.0",
+        "sample_size": 114,
+        "mae_inr": 21643470.155065697,
+        "mae_formatted": "\u20b92.16 Cr",
+        "rmse_inr": 50875822.718444675,
+        "rmse_formatted": "\u20b95.09 Cr",
+        "median_ae_inr": 6820370.312125616,
+        "median_ae_formatted": "\u20b968.20 Lakh",
+        "r2_score": 0.6325844464584404,
+        "mape_percentage": 34.8132711344527
+      }
+    },
+    "by_price_segment": {
+      "Budget (< 50L)": {
+        "model_name": "Segment_Budget (< 50L)",
+        "sample_size": 2818,
+        "mae_inr": 1147899.5311831422,
+        "mae_formatted": "\u20b911.48 Lakh",
+        "rmse_inr": 1679524.1761497569,
+        "rmse_formatted": "\u20b916.80 Lakh",
+        "median_ae_inr": 804778.5985395089,
+        "median_ae_formatted": "\u20b98.05 Lakh",
+        "r2_score": -1.7512081480548507,
+        "mape_percentage": 39.96320849916731
+      },
+      "Luxury (> 4Cr)": {
+        "model_name": "Segment_Luxury (> 4Cr)",
+        "sample_size": 686,
+        "mae_inr": 28355960.453643188,
+        "mae_formatted": "\u20b92.84 Cr",
+        "rmse_inr": 44439214.33783546,
+        "rmse_formatted": "\u20b94.44 Cr",
+        "median_ae_inr": 17899871.77183931,
+        "median_ae_formatted": "\u20b91.79 Cr",
+        "r2_score": 0.26882883341830366,
+        "mape_percentage": 33.97840747635503
+      },
+      "Mid-Market (50L - 1.5Cr)": {
+        "model_name": "Segment_Mid-Market (50L - 1.5Cr)",
+        "sample_size": 5235,
+        "mae_inr": 2216298.767519273,
+        "mae_formatted": "\u20b922.16 Lakh",
+        "rmse_inr": 3310778.8549861666,
+        "rmse_formatted": "\u20b933.11 Lakh",
+        "median_ae_inr": 1559871.2815034986,
+        "median_ae_formatted": "\u20b915.60 Lakh",
+        "r2_score": -0.5795759620719023,
+        "mape_percentage": 25.47265343779343
+      },
+      "Premium (1.5Cr - 4Cr)": {
+        "model_name": "Segment_Premium (1.5Cr - 4Cr)",
+        "sample_size": 2370,
+        "mae_inr": 5993613.556343867,
+        "mae_formatted": "\u20b959.94 Lakh",
+        "rmse_inr": 7922104.68409204,
+        "rmse_formatted": "\u20b979.22 Lakh",
+        "median_ae_inr": 4859524.832243313,
+        "median_ae_formatted": "\u20b948.60 Lakh",
+        "r2_score": -0.4700505426198809,
+        "mape_percentage": 26.08138562483966
+      }
+    }
+  },
+  "city_distribution": {
+    "Mumbai": 42106,
+    "Bengaluru": 12326,
+    "Delhi": 1111
+  },
+  "saved_at_utc": "2026-10-18T19:08:46.657984+00:00",
+  "target_column": "price_inr",
+  "feature_columns": [
+    "bhk",
+    "bathrooms",
+    "area_sqft",
+    "floor_number",
+    "total_floors",
+    "city",
+    "locality",
+    "property_type",
+    "furnishing_status",
+    "parking_available",
+    "lift_available",
+    "gated_community"
+  ]
+}
